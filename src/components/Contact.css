@@ -1,0 +1,21 @@
+.contacts {
+  display: flex;
+  justify-content: space-between;
+}
+.list1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.list2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Typography {
+  text-align: start;
+}
+
+.Typography .p {
+  text-align: start;
+}
