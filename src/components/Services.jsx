@@ -109,7 +109,14 @@ export default function ServiceComponent() {
             </Carousel>
           </div>
           <Typography paragraph></Typography>
-          <Typography paragraph>
+          <Typography
+            fontFamily={"serif"}
+            textAlign={"justify"}
+            paragraph
+            width={700}
+            marginLeft={20}
+            marginBottom={15}
+          >
             Consequat mauris nunc congue nisi vitae suscipit. Fringilla est
             ullamcorper eget nulla facilisi etiam dignissim diam. Pulvinar
             elementum integer enim neque volutpat ac tincidunt. Ornare
@@ -192,6 +199,7 @@ export default function ServiceComponent() {
               </div>
             </div>
           </Typography>
+          <div className="employees-table"></div>
         </Box>
         <Drawer
           sx={{
@@ -213,7 +221,7 @@ export default function ServiceComponent() {
               {/* <DemoItem label="Uncontrolled calendar">
                 <DateCalendar defaultValue={dayjs()} />
               </DemoItem> */}
-              <DemoItem label="Controlled calendar">
+              <DemoItem label="Calendar">
                 <DateCalendar
                   value={value}
                   onChange={(newValue) => setValue(newValue)}

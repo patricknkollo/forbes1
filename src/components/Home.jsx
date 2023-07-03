@@ -102,37 +102,68 @@ export default function HomeComponent() {
               <img src={bezos} alt="Mr. Jeff Bezos" width="500" height="400" />
             </Carousel>
           </div>
-          <Typography paragraph>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Rhoncus
-            dolor purus non enim praesent elementum facilisis leo vel. Risus at
-            ultrices mi tempus imperdiet. Semper risus in hendrerit gravida
-            rutrum quisque non tellus. Convallis convallis tellus id interdum
-            velit laoreet id donec ultrices. Odio morbi quis commodo odio aenean
-            sed adipiscing. Amet nisl suscipit adipiscing bibendum est ultricies
-            integer quis. Cursus euismod quis viverra nibh cras. Metus vulputate
-            eu scelerisque felis imperdiet proin fermentum leo. Mauris commodo
-            quis imperdiet massa tincidunt. Cras tincidunt lobortis feugiat
-            vivamus at augue. At augue eget arcu dictum varius duis at
-            consectetur lorem. Velit sed ullamcorper morbi tincidunt. Lorem
-            donec massa sapien faucibus et molestie ac.
+          <Typography
+            fontFamily={"serif"}
+            textAlign={"justify"}
+            paragraph
+            width={700}
+            marginLeft={20}
+            marginBottom={10}
+          >
+            They’re $200 billion poorer than last year, but still worth $2.1
+            trillion. It was a down year for many of the planet’s 2,640
+            billionaires–including those at the very top of the top. The 25
+            richest people in the world are worth a collective $2.1 trillion,
+            according to Forbes’ World’s Billionaires list, released
+            Tuesday–down a combined $200 billion from $2.3 trillion in 2022.
           </Typography>
-          <Typography paragraph>
-            Consequat mauris nunc congue nisi vitae suscipit. Fringilla est
-            ullamcorper eget nulla facilisi etiam dignissim diam. Pulvinar
-            elementum integer enim neque volutpat ac tincidunt. Ornare
-            suspendisse sed nisi lacus sed viverra tellus. Purus sit amet
-            volutpat consequat mauris. Elementum eu facilisis sed odio morbi.
-            Euismod lacinia at quis risus sed vulputate odio. Morbi tincidunt
-            ornare massa eget egestas purus viverra accumsan in. In hendrerit
-            gravida rutrum quisque non tellus orci ac. Pellentesque nec nam
-            aliquam sem et tortor. Habitant morbi tristique senectus et.
-            Adipiscing elit duis tristique sollicitudin nibh sit. Ornare aenean
-            euismod elementum nisi quis eleifend. Commodo viverra maecenas
-            accumsan lacus vel facilisis. Nulla posuere sollicitudin aliquam
-            ultrices sagittis orci a.
+          <Typography
+            fontFamily={"serif"}
+            textAlign={"justify"}
+            paragraph
+            width={700}
+            marginLeft={20}
+            marginBottom={10}
+          >
+            Two-thirds of the top 25 are poorer than they were last year,
+            compared to around half of the list overall. No one lost more than
+            Jeff Bezos as Amazon shares crashed by 38%. The drop lopped $57
+            billion from Bezos’ fortune and knocked him from No. 2 in the world
+            in 2022 to No. 3 this year. This year’s second-biggest loser, Elon
+            Musk, had it worse. He lost his title of world’s richest person
+            after his pricey purchase of Twitter, which he funded in part by the
+            sale of Tesla shares, helping to spook investors. Musk, who is worth
+            $39 billion less than a year ago, is now No. 2. Two people lost
+            their spot among the top 25. Zhang Yiming, who founded Tik
+            Tok-parent Bytedance, dropped one place, from No. 25 to No. 26, as
+            his embattled company has taken a haircut from investors. Binance
+            founder Changpeng Zhao, known as CZ, fell from No. 19 last year all
+            the way to No. 167 amid the crypto winter.
           </Typography>
-          <Typography></Typography>
+          <Typography
+            fontFamily={"serif"}
+            textAlign={"justify"}
+            paragraph
+            width={700}
+            marginLeft={20}
+            marginBottom={10}
+          >
+            Still, it’s not all bad news among this elite set. Bernard Arnault,
+            head of luxury goods giant LVMH, is up $53 billion–more than any
+            billionaire, and enough to vault him into No. 1 spot for the first
+            time. Eight other members of the top 25 got richer since the 2022
+            ranking, including Spanish retailer Amancio Ortega (+$17.7 billion),
+            Bloomberg LP cofounder and former New York mayor Michael Bloomberg
+            (+$12.5 billion) and Mexican telecom mogul Carlos Slim Helú (+$11.8
+            billion). With so many fortunes dropping around them, two
+            billionaires joined the top 25 this year: Canadian media mogul David
+            Thomson and Nike cofounder Phil Knight. Americans dominate the top
+            of the billionaires ranks, taking 17 of the 25 spots, followed by
+            France and India, with two apiece. The top 25 mostly made their
+            money in technology (eight list members) and fashion & retail
+            (seven).
+          </Typography>
+          <div className="employees-table"></div>
         </Box>
         <Drawer
           sx={{
@@ -151,7 +182,7 @@ export default function HomeComponent() {
               components={["DateCalendar", "DateCalendar"]}
               sx={{ marginTop: 15 }}
             >
-              <DemoItem label="Controlled calendar">
+              <DemoItem label="Calendar">
                 <DateCalendar
                   value={value}
                   onChange={(newValue) => setValue(newValue)}

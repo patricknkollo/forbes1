@@ -1,5 +1,5 @@
 .contacts {
-  display: flex;
+  display: block;
   justify-content: space-between;
 }
 .list1 {

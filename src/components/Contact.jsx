@@ -86,33 +86,50 @@ export default function ContactComponent() {
         >
           <Toolbar />
           <h1>Our contacts</h1>
-          <p>
-            In Case of issues with our services please don't hesitate to contact
-            us under the followings address and number
-          </p>
+          <Typography
+            fontFamily={"serif"}
+            textAlign={"justify"}
+            paragraph
+            width={700}
+            marginLeft={20}
+          >
+            <p>
+              In Case of issues with our services please don't hesitate to
+              contact us under the followings address and number
+            </p>
+          </Typography>
+
           <div className="contacts">
             <div className="list1">
               <Paper>
-                <Typography paragraph>
+                <Typography
+                  fontFamily={"serif"}
+                  textAlign={"justify"}
+                  paragraph
+                  marginLeft={3}
+                >
                   <p>Our availability in Germany</p>
-                  <p>Mo and Fr: from 09:00 am until 2:00 pm</p>
-
-                  <p>thu and tue: from 09:00 am until 5:00 pm</p>
-                  <p>Wed: from 09:00 am until 11:00 am</p>
-                  <p>Mo and Fr: from 09:00 am until 2:00 pm</p>
+                  <p>
+                    Mo and Fr: 09:00 am - 2:00 pm thu and tue: 09:00 am - 5:00
+                    pm Wed: 09:00 am - 11:00 am Mo and Fr: 09:00 am - 2:00 pm
+                  </p>
                   <p>Tel: +87 84621597523</p>
                   <p>Fax: +87 84621597546</p>
                   <p>email: afrforbes@gmx.com</p>
                 </Typography>
               </Paper>
-              <Paper>
-                <Typography paragraph>
+              <Paper marginLeft={3}>
+                <Typography
+                  fontFamily={"serif"}
+                  textAlign={"justify"}
+                  paragraph
+                  marginLeft={3}
+                >
                   <p>Our availability in spain</p>
-                  <p>Mo and Fr: from 09:00 am until 2:00 pm</p>
-
-                  <p>thu and tue: from 09:00 am until 5:00 pm</p>
-                  <p>Wed: from 09:00 am until 11:00 am</p>
-                  <p>Mo and Fr: from 09:00 am until 2:00 pm</p>
+                  <p>
+                    Mo and Fr: 09:00 am - 2:00 pm thu and tue: 09:00 am - 5:00
+                    pm Wed: 09:00 am - 11:00 am Mo and Fr: 09:00 am - 2:00 pm
+                  </p>
                   <p>Tel: +87 84621597523</p>
                   <p>Fax: +87 84621597546</p>
                   <p>email: afrforbes@gmx.com</p>
@@ -121,26 +138,34 @@ export default function ContactComponent() {
             </div>
             <div className="list2">
               <Paper>
-                <Typography paragraph>
+                <Typography
+                  fontFamily={"serif"}
+                  paragraph
+                  textAlign={"left"}
+                  marginLeft={3}
+                >
                   <p>Our availability in USA</p>
-                  <p>Mo and Fr: from 09:00 am until 2:00 pm</p>
-
-                  <p>thu and tue: from 09:00 am until 5:00 pm</p>
-                  <p>Wed: from 09:00 am until 11:00 am</p>
-                  <p>Mo and Fr: from 09:00 am until 2:00 pm</p>
+                  <p>
+                    Mo and Fr: 09:00 am - 2:00 pm thu and tue: 09:00 am - 5:00
+                    pm Wed: 09:00 am - 11:00 am Mo and Fr: 09:00 am - 2:00 pm
+                  </p>
                   <p>Tel: +87 84621597523</p>
                   <p>Fax: +87 84621597546</p>
                   <p>email: afrforbes@gmx.com</p>
                 </Typography>
               </Paper>
               <Paper>
-                <Typography paragraph>
+                <Typography
+                  fontFamily={"serif"}
+                  textAlign={"justify"}
+                  paragraph
+                  marginLeft={3}
+                >
                   <p>Our availability in UK</p>
-                  <p>Mo and Fr: from 09:00 am until 2:00 pm</p>
-
-                  <p>thu and tue: from 09:00 am until 5:00 pm</p>
-                  <p>Wed: from 09:00 am until 11:00 am</p>
-                  <p>Mo and Fr: from 09:00 am until 2:00 pm</p>
+                  <p>
+                    Mo and Fr: 09:00 am - 2:00 pm thu and tue: 09:00 am - 5:00
+                    pm Wed: 09:00 am - 11:00 am Mo and Fr: 09:00 am - 2:00 pm
+                  </p>
                   <p>Tel: +87 84621597523</p>
                   <p>Fax: +87 84621597546</p>
                   <p>email: afrforbes@gmx.com</p>
@@ -148,6 +173,7 @@ export default function ContactComponent() {
               </Paper>
             </div>
           </div>
+          <div className="employees-table"></div>
         </Box>
         <Drawer
           sx={{
@@ -169,7 +195,7 @@ export default function ContactComponent() {
               {/* <DemoItem label="Uncontrolled calendar">
                 <DateCalendar defaultValue={dayjs()} />
               </DemoItem> */}
-              <DemoItem label="Controlled calendar">
+              <DemoItem label="Calendar">
                 <DateCalendar
                   value={value}
                   onChange={(newValue) => setValue(newValue)}

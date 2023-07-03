@@ -10,7 +10,7 @@ import {
   Toolbar,
   Typography,
 } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
+//import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import HomeIcon from "@mui/icons-material/Home";
@@ -76,7 +76,7 @@ function NavbarComponent() {
           aria-label="open drawer"
           sx={{ mr: 2 }}
         >
-          <MenuIcon />
+          {/* <MenuIcon /> */}
         </IconButton>
         <Typography
           variant="h6"

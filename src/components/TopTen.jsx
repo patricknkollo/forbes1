@@ -10,6 +10,7 @@ import TableCell from "@mui/material/TableCell";
 import TableRow from "@mui/material/TableRow";
 import axios from "axios";
 import {
+  Button,
   Paper,
   Table,
   TableBody,
@@ -127,7 +128,14 @@ export default function TopTenList() {
               <img src={bezos} alt="Mr. Jeff Bezos" width="500" height="400" />
             </Carousel>
           </div>
-          <Typography paragraph>
+          <Typography
+            fontFamily={"serif"}
+            textAlign={"justify"}
+            paragraph
+            width={700}
+            marginLeft={20}
+            marginBottom={10}
+          >
             The World's Billionaires is an annual ranking of people who are
             considered to have a net worth of $1 billion or more, by the
             American business magazine Forbes. The list was first published in
@@ -153,7 +161,14 @@ export default function TopTenList() {
             width="500"
             height="400"
           />
-          <Typography paragraph>
+          <Typography
+            fontFamily={"serif"}
+            textAlign={"justify"}
+            paragraph
+            width={700}
+            marginLeft={20}
+            marginBottom={10}
+          >
             <p>
               {" "}
               Bernard Jean Étienne Arnault (French: [bɛʁnaʁ ʒɑ̃ etjɛn aʁno]; born
@@ -199,7 +214,15 @@ export default function TopTenList() {
           </Typography>
 
           <img src={gates} alt="Mr. Bill gates" width="500" height="500" />
-          <Typography paragraph>
+          <Typography
+            paragraph
+            fontFamily={"serif"}
+            textAlign={"justify"}
+            justifyContent={"center"}
+            width={700}
+            // marginLeft={40}
+            marginBottom={15}
+          >
             <p>
               William Henry Gates III (born October 28, 1955) is an American
               business magnate, investor, and philanthropist. He is best known
@@ -259,7 +282,14 @@ export default function TopTenList() {
           </Typography>
 
           <img src={musk} alt="Mr. Musk" width="500" height="400" />
-          <Typography paragraph>
+          <Typography
+            fontFamily={"serif"}
+            textAlign={"justify"}
+            paragraph
+            width={700}
+            marginLeft={20}
+            marginBottom={15}
+          >
             <p>
               Elon Reeve Musk (/ˈiːlɒn/ EE-lon; born June 28, 1971) is a
               business magnate and investor. He is the founder, CEO and chief
@@ -352,35 +382,50 @@ export default function TopTenList() {
                   </TableRow>
                 </TableHead>
                 <TableBody>
-                  {rows
-                    .filter(
-                      (row) =>
-                        (row.nom.toLowerCase().includes(attribut) ||
-                          row.prenom.toLowerCase().includes(attribut)) &&
-                        row.pays.toLowerCase().includes("usa")
-                    )
-                    .map((row) => (
-                      <TableRow
-                        key={row.personid}
-                        sx={{
-                          "&:last-child td, &:last-child th": { border: 0 },
-                        }}
-                      >
-                        <TableCell component="th" scope="row">
-                          {row.personid}
-                        </TableCell>
-                        <TableCell align="right">{row.prenom}</TableCell>
-                        <TableCell align="right">{row.nom}</TableCell>
-                        <TableCell align="right">{row.age}</TableCell>
-                        <TableCell align="right">{row.networth}</TableCell>
-                        <TableCell align="right">{row.unite}</TableCell>
-                        <TableCell align="right">{row.pays}</TableCell>
-                      </TableRow>
-                    ))}
+                  {rows.map((row) => (
+                    <TableRow
+                      key={row.personid}
+                      sx={{
+                        "&:last-child td, &:last-child th": { border: 0 },
+                      }}
+                    >
+                      <TableCell component="th" scope="row">
+                        {row.personid}
+                      </TableCell>
+                      <TableCell align="right">{row.prenom}</TableCell>
+                      <TableCell align="right">{row.nom}</TableCell>
+                      <TableCell align="right">
+                        {" "}
+                        {Math.abs(
+                          new Date(
+                            Date.now() - new Date(row.age).getTime()
+                          ).getUTCFullYear() - 1970
+                        )}
+                      </TableCell>
+                      <TableCell align="right">{row.networth}</TableCell>
+                      <TableCell align="right">{row.unite}</TableCell>
+                      <TableCell align="right">{row.pays}</TableCell>
+                    </TableRow>
+                  ))}
                 </TableBody>
               </Table>
             </TableContainer>
+            <br></br>
+            <div className="pdfButton">
+              <Button
+                variant="contained"
+                href="http://localhost:8080/api/employeur/topten/report"
+                color="success"
+                id="pdfbutton"
+                /*  sx={{ height: 15, marginBottom: 0, marginTop: 5 }} */
+              >
+                pdf
+              </Button>
+            </div>
           </div>
+          <Button>Primary</Button>
+          <Button disabled>Disabled</Button>
+          <Button href="#text-buttons">Link</Button>
         </Box>
         <Drawer
           sx={{
@@ -402,7 +447,7 @@ export default function TopTenList() {
               {/* <DemoItem label="Uncontrolled calendar">
                 <DateCalendar defaultValue={dayjs()} />
               </DemoItem> */}
-              <DemoItem label="Controlled calendar">
+              <DemoItem label="Calendar">
                 <DateCalendar
                   value={value}
                   onChange={(newValue) => setValue(newValue)}

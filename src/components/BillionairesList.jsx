@@ -10,6 +10,7 @@ import TableCell from "@mui/material/TableCell";
 import TableRow from "@mui/material/TableRow";
 import axios from "axios";
 import {
+  Button,
   Paper,
   Table,
   TableBody,
@@ -138,20 +139,25 @@ export default function ResponsiveDrawer() {
               <img src={bezos} alt="Mr. Jeff Bezos" width="500" height="400" />
             </Carousel>
           </div>
-          <Typography paragraph>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Rhoncus
-            dolor purus non enim praesent elementum facilisis leo vel. Risus at
-            ultrices mi tempus imperdiet. Semper risus in hendrerit gravida
-            rutrum quisque non tellus. Convallis convallis tellus id interdum
-            velit laoreet id donec ultrices. Odio morbi quis commodo odio aenean
-            sed adipiscing. Amet nisl suscipit adipiscing bibendum est ultricies
-            integer quis. Cursus euismod quis viverra nibh cras. Metus vulputate
-            eu scelerisque felis imperdiet proin fermentum leo. Mauris commodo
-            quis imperdiet massa tincidunt. Cras tincidunt lobortis feugiat
-            vivamus at augue. At augue eget arcu dictum varius duis at
-            consectetur lorem. Velit sed ullamcorper morbi tincidunt. Lorem
-            donec massa sapien faucibus et molestie ac.
+          <Typography
+            fontFamily={"serif"}
+            textAlign={"justify"}
+            paragraph
+            width={700}
+            marginLeft={20}
+            marginBottom={15}
+          >
+            What country has the most billionaires? There are more than 2700
+            billionaires globally. Over a quarter of the world’s billionaires
+            live in the United States. While the number of billionaires fell
+            amid the COVID-19 pandemic in 2020, the figure rebounded and grew
+            again in 2021. Together, the ten countries with the most
+            billionaires have 2159 billionaires, about 78.4% of the global
+            total. Of these countries, Hong Kong has the most billionaires per
+            million people, with 8.83. Top 10 Countries with the Highest Number
+            of Billionaires: United States - 724 China - 698 (626 mainland, 71
+            Hong Kong, 1 Macau) India - 140 Germany - 136 Russia - 117 Hong Kong
+            - 71 Brazil - 65 Canada - 64 United Kingdom - 56 Italy - 51
           </Typography>
           <img
             src={arnault}
@@ -159,20 +165,34 @@ export default function ResponsiveDrawer() {
             width="500"
             height="400"
           />
-          <Typography paragraph>
-            Consequat mauris nunc congue nisi vitae suscipit. Fringilla est
-            ullamcorper eget nulla facilisi etiam dignissim diam. Pulvinar
-            elementum integer enim neque volutpat ac tincidunt. Ornare
-            suspendisse sed nisi lacus sed viverra tellus. Purus sit amet
-            volutpat consequat mauris. Elementum eu facilisis sed odio morbi.
-            Euismod lacinia at quis risus sed vulputate odio. Morbi tincidunt
-            ornare massa eget egestas purus viverra accumsan in. In hendrerit
-            gravida rutrum quisque non tellus orci ac. Pellentesque nec nam
-            aliquam sem et tortor. Habitant morbi tristique senectus et.
-            Adipiscing elit duis tristique sollicitudin nibh sit. Ornare aenean
-            euismod elementum nisi quis eleifend. Commodo viverra maecenas
-            accumsan lacus vel facilisis. Nulla posuere sollicitudin aliquam
-            ultrices sagittis orci a.
+          <Typography
+            fontFamily={"serif"}
+            textAlign={"justify"}
+            paragraph
+            width={700}
+            marginLeft={20}
+            marginBottom={15}
+          >
+            How many billionaires are there in the world? According to Forbes’s
+            2021 list of billionaires, there were 2,755 billionaires worldwide
+            in 2021, for an average of .35 billionaires per million people. This
+            is 660 higher than 2020’s number, with a record high of 493 new
+            billionaires joining the list. In addition, 86% of the existing
+            billionaires are wealthier than they were a year ago. The United
+            States has the most billionaires, with 724, followed by China
+            (including Hong Kong and Macau) with 698. These two countries
+            account for more than 50% of the world’s billionaires. The top
+            billionaire and world’s richest individual is Jeff Bezos, the
+            founder of Amazon, worth $177 billion. Tesla CEO Elon Musk follows,
+            worth $151 billion. Together, the world’s billionaires are worth
+            $13.1 trillion, up from $8 trillion in 2020. The list of the richest
+            people in the world has changed significantly during the past few
+            years. As company values rise and fall, and as people continue to
+            give away their money, the identity of the richest person in the
+            world can change. For example, many people believe Jeff Bezos is the
+            richest person in the world. He is the founder of Amazon, and his
+            net worth changes based on the value of Amazon itself. It is widely
+            believed that he is worth more than $131 billion.
           </Typography>
 
           <Typography>
@@ -234,7 +254,13 @@ export default function ResponsiveDrawer() {
                         </TableCell>
                         <TableCell align="right">{row.prenom}</TableCell>
                         <TableCell align="right">{row.nom}</TableCell>
-                        <TableCell align="right">{row.age}</TableCell>
+                        <TableCell align="right">
+                          {Math.abs(
+                            new Date(
+                              Date.now() - new Date(row.age).getTime()
+                            ).getUTCFullYear() - 1970
+                          )}
+                        </TableCell>
                         <TableCell align="right">{row.networth}</TableCell>
                         <TableCell align="right">{row.unite}</TableCell>
                         <TableCell align="right">{row.pays}</TableCell>
@@ -243,6 +269,18 @@ export default function ResponsiveDrawer() {
                 </TableBody>
               </Table>
             </TableContainer>
+            <br></br>
+            <div className="pdfButton">
+              <Button
+                variant="contained"
+                href="http://localhost:8080/api/employeur/all/report"
+                color="success"
+                id="pdfbutton"
+                /*  sx={{ height: 15, marginBottom: 0, marginTop: 5 }} */
+              >
+                pdf
+              </Button>
+            </div>
           </div>
         </Box>
         <Drawer
@@ -265,7 +303,7 @@ export default function ResponsiveDrawer() {
               {/* <DemoItem label="Uncontrolled calendar">
                 <DateCalendar defaultValue={dayjs()} />
               </DemoItem> */}
-              <DemoItem label="Controlled calendar">
+              <DemoItem label="Calendar">
                 <DateCalendar
                   value={value}
                   onChange={(newValue) => setValue(newValue)}

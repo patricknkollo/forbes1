@@ -65,3 +65,46 @@
 .employees-table {
   margin-bottom: 200px;
 }
+
+.employees-table {
+  margin-bottom: 200px;
+}
+
+.pdfbutton {
+  align-items: flex-start;
+  align-content: flex-start;
+  height: 50px;
+  background-color: goldenrod;
+  margin-top: 4px;
+  margin-bottom: 6px;
+}
+
+#pdfbutton {
+  height: 15px;
+}
+
+.pdfButton {
+  height: 40px;
+  justify-content: start;
+  align-items: start;
+  align-content: start;
+}
+
+.pdfButton #pdfbutton {
+  position: inherit;
+  height: 25px;
+  margin-top: 5px;
+  margin-right: 930px;
+}
+
+.Typography {
+  text-align: left;
+  margin-left: 30px;
+}
+
+/* .paragraph {
+  font-family: "serif";
+  text-align: "justify";
+  margin-left: 20;
+  width: 700px;
+} */
