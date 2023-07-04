@@ -113,8 +113,8 @@ export default function ServiceComponent() {
             fontFamily={"serif"}
             textAlign={"justify"}
             paragraph
-            width={700}
-            marginLeft={20}
+            //width={700}
+            //marginLeft={20}
             marginBottom={15}
           >
             Consequat mauris nunc congue nisi vitae suscipit. Fringilla est

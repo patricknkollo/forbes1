@@ -164,9 +164,10 @@ export default function AfricaList() {
             paragraph
             fontFamily={"serif"}
             textAlign={"justify"}
-            width={700}
-            marginLeft={20}
+            //  width={700}
+            //marginLeft={20}
             marginBottom={7}
+            marginTop={5}
           >
             Africa’s wealthiest people shed a combined $3.1 billion in the past
             12 months, following a global decline for markets in 2022. As a
@@ -207,8 +208,8 @@ export default function AfricaList() {
             paragraph
             fontFamily={"serif"}
             textAlign={"justify"}
-            width={700}
-            marginLeft={20}
+            //  width={700}
+            //marginLeft={20}
             marginBottom={10}
           >
             At number two on the list is Johann Rupert. The chairman of Swiss
@@ -227,8 +228,8 @@ export default function AfricaList() {
             fontFamily={"serif"}
             textAlign={"justify"}
             paragraph
-            width={700}
-            marginLeft={20}
+            //  width={700}
+            //marginLeft={20}
             marginBottom={10}
           >
             Only seven out of the 54 African countries are represented on
@@ -245,8 +246,8 @@ export default function AfricaList() {
             fontFamily={"serif"}
             textAlign={"justify"}
             paragraph
-            width={700}
-            marginLeft={20}
+            //  width={700}
+            //marginLeft={20}
             marginBottom={10}
             marginTop={5}
           >
@@ -282,8 +283,8 @@ export default function AfricaList() {
             fontFamily={"serif"}
             textAlign={"justify"}
             paragraph
-            width={700}
-            marginLeft={20}
+            // width={700}
+            //marginLeft={20}
             marginBottom={10}
             marginTop={5}
           >

@@ -133,8 +133,8 @@ export default function UsaList() {
             fontFamily={"serif"}
             textAlign={"justify"}
             paragraph
-            width={700}
-            marginLeft={20}
+            //  width={700}
+            //marginLeft={20}
           >
             The list of the richest people in the world has changed
             significantly during the past few years. As company values rise and
@@ -154,8 +154,8 @@ export default function UsaList() {
               fontFamily={"serif"}
               textAlign={"justify"}
               paragraph
-              marginLeft={20}
-              width={700}
+              //marginLeft={20}
+              //   width={700}
               position={""}
             >
               <p>
@@ -177,8 +177,8 @@ export default function UsaList() {
             fontFamily={"serif"}
             textAlign={"justify"}
             paragraph
-            width={700}
-            marginLeft={20}
+            //width={700}
+            //marginLeft={20}
             marginBottom={10}
           >
             Some people are wondering how someone's net worth can change so
@@ -214,8 +214,8 @@ export default function UsaList() {
             fontFamily={"serif"}
             textAlign={"justify"}
             paragraph
-            width={700}
-            marginLeft={20}
+            //width={700}
+            //marginLeft={20}
           >
             <h3>
               With a net worth of USD 187 billion as per the Bloomberg
@@ -228,8 +228,8 @@ export default function UsaList() {
             fontFamily={"serif"}
             textAlign={"justify"}
             paragraph
-            width={700}
-            marginLeft={20}
+            // width={700}
+            //marginLeft={20}
             marginBottom={15}
           >
             The French business magnet is the chairman and CEO of luxury goods

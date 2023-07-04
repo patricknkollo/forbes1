@@ -106,8 +106,8 @@ export default function AboutUsComponent() {
             fontFamily={"serif"}
             textAlign={"justify"}
             paragraph
-            width={700}
-            marginLeft={20}
+            //  width={700}
+            // marginLeft={20}
             marginBottom={5}
           >
             <p>
@@ -123,8 +123,8 @@ export default function AboutUsComponent() {
             fontFamily={"serif"}
             textAlign={"justify"}
             paragraph
-            width={700}
-            marginLeft={20}
+            //  width={700}
+            //marginLeft={20}
             marginBottom={15}
           >
             <h3>What we want</h3>

@@ -106,9 +106,10 @@ export default function HomeComponent() {
             fontFamily={"serif"}
             textAlign={"justify"}
             paragraph
-            width={700}
-            marginLeft={20}
-            marginBottom={10}
+            // width={700}
+            //marginLeft={20}
+            marginBottom={3}
+            marginTop={5}
           >
             They’re $200 billion poorer than last year, but still worth $2.1
             trillion. It was a down year for many of the planet’s 2,640
@@ -121,9 +122,9 @@ export default function HomeComponent() {
             fontFamily={"serif"}
             textAlign={"justify"}
             paragraph
-            width={700}
-            marginLeft={20}
-            marginBottom={10}
+            //width={700}
+            //marginLeft={20}
+            marginBottom={3}
           >
             Two-thirds of the top 25 are poorer than they were last year,
             compared to around half of the list overall. No one lost more than
@@ -144,9 +145,9 @@ export default function HomeComponent() {
             fontFamily={"serif"}
             textAlign={"justify"}
             paragraph
-            width={700}
-            marginLeft={20}
-            marginBottom={10}
+            //width={700}
+            //marginLeft={20}
+            marginBottom={3}
           >
             Still, it’s not all bad news among this elite set. Bernard Arnault,
             head of luxury goods giant LVMH, is up $53 billion–more than any

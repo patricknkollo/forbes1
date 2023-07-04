@@ -132,9 +132,10 @@ export default function TopTenList() {
             fontFamily={"serif"}
             textAlign={"justify"}
             paragraph
-            width={700}
-            marginLeft={20}
+            // width={700}
+            //marginLeft={20}
             marginBottom={10}
+            marginTop={5}
           >
             The World's Billionaires is an annual ranking of people who are
             considered to have a net worth of $1 billion or more, by the
@@ -165,9 +166,10 @@ export default function TopTenList() {
             fontFamily={"serif"}
             textAlign={"justify"}
             paragraph
-            width={700}
-            marginLeft={20}
+            //width={700}
+            //marginLeft={20}
             marginBottom={10}
+            marginTop={5}
           >
             <p>
               {" "}
@@ -219,9 +221,10 @@ export default function TopTenList() {
             fontFamily={"serif"}
             textAlign={"justify"}
             justifyContent={"center"}
-            width={700}
-            // marginLeft={40}
+            //width={700}
+            //marginLeft={20}
             marginBottom={15}
+            marginTop={5}
           >
             <p>
               William Henry Gates III (born October 28, 1955) is an American
@@ -286,9 +289,10 @@ export default function TopTenList() {
             fontFamily={"serif"}
             textAlign={"justify"}
             paragraph
-            width={700}
-            marginLeft={20}
+            //width={700}
+            //marginLeft={20}
             marginBottom={15}
+            marginTop={5}
           >
             <p>
               Elon Reeve Musk (/ˈiːlɒn/ EE-lon; born June 28, 1971) is a

@@ -37,6 +37,7 @@ export default function ResponsiveDrawer() {
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [rows, setRows] = React.useState([]);
   const [attribut, setAttribut] = React.useState("");
+  //const [rowIndex, setRowIndex] = React.useState(1);
 
   const [value, setValue] = React.useState(dayjs());
 
@@ -143,9 +144,10 @@ export default function ResponsiveDrawer() {
             fontFamily={"serif"}
             textAlign={"justify"}
             paragraph
-            width={700}
-            marginLeft={20}
+            //  width={700}
+            //marginLeft={20}
             marginBottom={15}
+            marginTop={5}
           >
             What country has the most billionaires? There are more than 2700
             billionaires globally. Over a quarter of the world’s billionaires
@@ -169,9 +171,10 @@ export default function ResponsiveDrawer() {
             fontFamily={"serif"}
             textAlign={"justify"}
             paragraph
-            width={700}
-            marginLeft={20}
+            //  width={700}
+            //marginLeft={20}
             marginBottom={15}
+            marginTop={5}
           >
             How many billionaires are there in the world? According to Forbes’s
             2021 list of billionaires, there were 2,755 billionaires worldwide
@@ -225,7 +228,7 @@ export default function ResponsiveDrawer() {
               <Table sx={{ minWidth: 650 }} aria-label="simple table">
                 <TableHead>
                   <TableRow>
-                    <TableCell>id</TableCell>
+                    <TableCell>rang</TableCell>
                     <TableCell align="right">prenom</TableCell>
                     <TableCell align="right">nom</TableCell>
                     <TableCell align="right">age</TableCell>
