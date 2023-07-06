@@ -354,7 +354,7 @@ export default function AfricaList() {
                     <TableCell align="right">age</TableCell>
                     <TableCell align="right">networth&nbsp;($)</TableCell>
                     <TableCell align="right">unite</TableCell>
-                    <TableCell align="right">ville</TableCell>
+                    <TableCell align="right">country</TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>

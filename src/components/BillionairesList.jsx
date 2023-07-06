@@ -223,68 +223,71 @@ export default function ResponsiveDrawer() {
               </div>
             </div>
           </Typography>
-          <div className="employees-table">
-            <TableContainer component={Paper}>
-              <Table sx={{ minWidth: 650 }} aria-label="simple table">
-                <TableHead>
-                  <TableRow>
-                    <TableCell>rang</TableCell>
-                    <TableCell align="right">prenom</TableCell>
-                    <TableCell align="right">nom</TableCell>
-                    <TableCell align="right">age</TableCell>
-                    <TableCell align="right">networth&nbsp;($)</TableCell>
-                    <TableCell align="right">unite</TableCell>
-                    <TableCell align="right">ville</TableCell>
-                  </TableRow>
-                </TableHead>
-                <TableBody>
-                  {rows
-                    .filter(
-                      (row) =>
-                        row.nom.toLowerCase().includes(attribut) ||
-                        row.prenom.toLowerCase().includes(attribut) ||
-                        row.pays.toLowerCase().includes(attribut)
-                    )
-                    .map((row) => (
-                      <TableRow
-                        key={row.personid}
-                        sx={{
-                          "&:last-child td, &:last-child th": { border: 0 },
-                        }}
-                      >
-                        <TableCell component="th" scope="row">
-                          {row.personid}
-                        </TableCell>
-                        <TableCell align="right">{row.prenom}</TableCell>
-                        <TableCell align="right">{row.nom}</TableCell>
-                        <TableCell align="right">
-                          {Math.abs(
-                            new Date(
-                              Date.now() - new Date(row.age).getTime()
-                            ).getUTCFullYear() - 1970
-                          )}
-                        </TableCell>
-                        <TableCell align="right">{row.networth}</TableCell>
-                        <TableCell align="right">{row.unite}</TableCell>
-                        <TableCell align="right">{row.pays}</TableCell>
-                      </TableRow>
-                    ))}
-                </TableBody>
-              </Table>
-            </TableContainer>
-            <br></br>
-            <div className="pdfButton">
-              <Button
-                variant="contained"
-                href="http://localhost:8080/api/employeur/all/report"
-                color="success"
-                id="pdfbutton"
-                /*  sx={{ height: 15, marginBottom: 0, marginTop: 5 }} */
-              >
-                pdf
-              </Button>
+          <Typography fontFamily={"serif"}>
+            <div className="employees-table">
+              <TableContainer component={Paper}>
+                <Table sx={{ minWidth: 650 }} aria-label="simple table">
+                  <TableHead>
+                    <TableRow>
+                      <TableCell>rang</TableCell>
+                      <TableCell align="right">prenom</TableCell>
+                      <TableCell align="right">nom</TableCell>
+                      <TableCell align="right">age</TableCell>
+                      <TableCell align="right">networth&nbsp;($)</TableCell>
+                      <TableCell align="right">unite</TableCell>
+                      <TableCell align="right">country</TableCell>
+                    </TableRow>
+                  </TableHead>
+                  <TableBody>
+                    {rows
+                      .filter(
+                        (row) =>
+                          row.nom.toLowerCase().includes(attribut) ||
+                          row.prenom.toLowerCase().includes(attribut) ||
+                          row.pays.toLowerCase().includes(attribut)
+                      )
+                      .map((row) => (
+                        <TableRow
+                          key={row.personid}
+                          sx={{
+                            "&:last-child td, &:last-child th": { border: 0 },
+                          }}
+                        >
+                          <TableCell component="th" scope="row">
+                            {row.personid}
+                          </TableCell>
+                          <TableCell align="right">{row.prenom}</TableCell>
+                          <TableCell align="right">{row.nom}</TableCell>
+                          <TableCell align="right">
+                            {Math.abs(
+                              new Date(
+                                Date.now() - new Date(row.age).getTime()
+                              ).getUTCFullYear() - 1970
+                            )}
+                          </TableCell>
+                          <TableCell align="right">{row.networth}</TableCell>
+                          <TableCell align="right">{row.unite}</TableCell>
+                          <TableCell align="right">{row.pays}</TableCell>
+                        </TableRow>
+                      ))}
+                  </TableBody>
+                </Table>
+              </TableContainer>
+
+              <br></br>
+              <div className="pdfButton">
+                <Button
+                  variant="contained"
+                  href="http://localhost:8080/api/employeur/all/report"
+                  color="success"
+                  id="pdfbutton"
+                  /*  sx={{ height: 15, marginBottom: 0, marginTop: 5 }} */
+                >
+                  pdf
+                </Button>
+              </div>
             </div>
-          </div>
+          </Typography>
         </Box>
         <Drawer
           sx={{
