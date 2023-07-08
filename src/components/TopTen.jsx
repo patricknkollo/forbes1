@@ -345,7 +345,20 @@ export default function TopTenList() {
               the SEC.
             </p>
           </Typography>
-
+          <Typography
+            sx={{
+              backgroundColor: "yellow",
+              height: 75,
+              marginBottom: 15,
+              fontWeight: "bold",
+              textAlign: "center",
+              fontSize: 30,
+              fontFamily: "monospace",
+              verticalAlign: "baseline",
+            }}
+          >
+            THE REAL-TIME BILLIONAIRES LIST
+          </Typography>
           <Typography>
             <div
               sx={{
@@ -375,7 +388,7 @@ export default function TopTenList() {
             <TableContainer component={Paper}>
               <Table sx={{ minWidth: 650 }} aria-label="simple table">
                 <TableHead>
-                  <TableRow>
+                  <TableRow sx={{ backgroundColor: "yellow" }}>
                     <TableCell
                       sx={{
                         fontSize: 18,

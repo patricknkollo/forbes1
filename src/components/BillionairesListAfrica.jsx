@@ -317,7 +317,20 @@ export default function AfricaList() {
             $6.2 billion, Adenuga is ranked as one of the world’s most affluent
             billionaires, placing him at 409th on Forbes’ global wealth list
           </Typography>
-
+          <Typography
+            sx={{
+              backgroundColor: "yellow",
+              height: 75,
+              marginBottom: 15,
+              fontWeight: "bold",
+              textAlign: "center",
+              fontSize: 30,
+              fontFamily: "monospace",
+              verticalAlign: "baseline",
+            }}
+          >
+            THE REAL-TIME BILLIONAIRES LIST
+          </Typography>
           <Typography>
             <div
               sx={{
@@ -347,7 +360,7 @@ export default function AfricaList() {
             <TableContainer component={Paper}>
               <Table sx={{ minWidth: 650 }} aria-label="simple table">
                 <TableHead>
-                  <TableRow>
+                  <TableRow sx={{ backgroundColor: "yellow" }}>
                     <TableCell
                       sx={{
                         fontSize: 18,

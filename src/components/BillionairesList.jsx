@@ -197,7 +197,20 @@ export default function ResponsiveDrawer() {
             net worth changes based on the value of Amazon itself. It is widely
             believed that he is worth more than $131 billion.
           </Typography>
-
+          <Typography
+            sx={{
+              backgroundColor: "yellow",
+              height: 75,
+              marginBottom: 15,
+              fontWeight: "bold",
+              textAlign: "center",
+              fontSize: 30,
+              fontFamily: "monospace",
+              verticalAlign: "baseline",
+            }}
+          >
+            THE REAL-TIME BILLIONAIRES LIST
+          </Typography>
           <Typography>
             <div
               sx={{
@@ -231,7 +244,7 @@ export default function ResponsiveDrawer() {
                   aria-label="simple table"
                 >
                   <TableHead>
-                    <TableRow>
+                    <TableRow sx={{ backgroundColor: "yellow" }}>
                       <TableCell
                         sx={{
                           fontSize: 18,

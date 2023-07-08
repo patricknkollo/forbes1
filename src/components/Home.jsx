@@ -164,6 +164,21 @@ export default function HomeComponent() {
             money in technology (eight list members) and fashion & retail
             (seven).
           </Typography>
+          <Typography
+            sx={{
+              backgroundColor: "yellow",
+              height: 75,
+              marginBottom: 15,
+              fontWeight: "bold",
+              textAlign: "center",
+              fontSize: 30,
+              fontFamily: "monospace",
+              verticalAlign: "baseline",
+              marginTop: 15,
+            }}
+          >
+            THE REAL-TIME BILLIONAIRES LIST
+          </Typography>
           <div className="employees-table"></div>
         </Box>
         <Drawer
