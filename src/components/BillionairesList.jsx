@@ -226,16 +226,81 @@ export default function ResponsiveDrawer() {
           <Typography fontFamily={"serif"}>
             <div className="employees-table">
               <TableContainer component={Paper}>
-                <Table sx={{ minWidth: 650 }} aria-label="simple table">
+                <Table
+                  sx={{ minWidth: 650, fontSize: 30, fontFamily: "serif" }}
+                  aria-label="simple table"
+                >
                   <TableHead>
                     <TableRow>
-                      <TableCell>rang</TableCell>
-                      <TableCell align="right">prenom</TableCell>
-                      <TableCell align="right">nom</TableCell>
-                      <TableCell align="right">age</TableCell>
-                      <TableCell align="right">networth&nbsp;($)</TableCell>
-                      <TableCell align="right">unite</TableCell>
-                      <TableCell align="right">country</TableCell>
+                      <TableCell
+                        sx={{
+                          fontSize: 18,
+                          fontFamily: "serif",
+                          fontWeight: "bold",
+                        }}
+                      >
+                        rang
+                      </TableCell>
+                      <TableCell
+                        sx={{
+                          fontSize: 18,
+                          fontFamily: "serif",
+                          fontWeight: "bold",
+                        }}
+                        align="right"
+                      >
+                        prenom
+                      </TableCell>
+                      <TableCell
+                        sx={{
+                          fontSize: 18,
+                          fontFamily: "serif",
+                          fontWeight: "bold",
+                        }}
+                        align="right"
+                      >
+                        nom
+                      </TableCell>
+                      <TableCell
+                        sx={{
+                          fontSize: 18,
+                          fontFamily: "serif",
+                          fontWeight: "bold",
+                        }}
+                        align="right"
+                      >
+                        age
+                      </TableCell>
+                      <TableCell
+                        sx={{
+                          fontSize: 18,
+                          fontFamily: "serif",
+                          fontWeight: "bold",
+                        }}
+                        align="right"
+                      >
+                        networth&nbsp;($)
+                      </TableCell>
+                      <TableCell
+                        sx={{
+                          fontSize: 18,
+                          fontFamily: "serif",
+                          fontWeight: "bold",
+                        }}
+                        align="right"
+                      >
+                        unite
+                      </TableCell>
+                      <TableCell
+                        sx={{
+                          fontSize: 18,
+                          fontFamily: "serif",
+                          fontWeight: "bold",
+                        }}
+                        align="right"
+                      >
+                        country
+                      </TableCell>
                     </TableRow>
                   </TableHead>
                   <TableBody>
@@ -256,18 +321,46 @@ export default function ResponsiveDrawer() {
                           <TableCell component="th" scope="row">
                             {row.personid}
                           </TableCell>
-                          <TableCell align="right">{row.prenom}</TableCell>
-                          <TableCell align="right">{row.nom}</TableCell>
-                          <TableCell align="right">
+                          <TableCell
+                            sx={{ fontSize: 18, fontFamily: "serif" }}
+                            align="right"
+                          >
+                            {row.prenom}
+                          </TableCell>
+                          <TableCell
+                            sx={{ fontSize: 18, fontFamily: "serif" }}
+                            align="right"
+                          >
+                            {row.nom}
+                          </TableCell>
+                          <TableCell
+                            sx={{ fontSize: 18, fontFamily: "serif" }}
+                            align="right"
+                          >
                             {Math.abs(
                               new Date(
                                 Date.now() - new Date(row.age).getTime()
                               ).getUTCFullYear() - 1970
                             )}
                           </TableCell>
-                          <TableCell align="right">{row.networth}</TableCell>
-                          <TableCell align="right">{row.unite}</TableCell>
-                          <TableCell align="right">{row.pays}</TableCell>
+                          <TableCell
+                            sx={{ fontSize: 18, fontFamily: "serif" }}
+                            align="right"
+                          >
+                            {row.networth}
+                          </TableCell>
+                          <TableCell
+                            sx={{ fontSize: 18, fontFamily: "serif" }}
+                            align="right"
+                          >
+                            {row.unite}
+                          </TableCell>
+                          <TableCell
+                            sx={{ fontSize: 18, fontFamily: "serif" }}
+                            align="right"
+                          >
+                            {row.pays}
+                          </TableCell>
                         </TableRow>
                       ))}
                   </TableBody>

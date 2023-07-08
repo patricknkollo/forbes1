@@ -285,13 +285,75 @@ export default function UsaList() {
               <Table sx={{ minWidth: 650 }} aria-label="simple table">
                 <TableHead>
                   <TableRow>
-                    <TableCell>id</TableCell>
-                    <TableCell align="right">firstname</TableCell>
-                    <TableCell align="right">name</TableCell>
-                    <TableCell align="right">age</TableCell>
-                    <TableCell align="right">networth&nbsp;($)</TableCell>
-                    <TableCell align="right">unity</TableCell>
-                    <TableCell align="right">country</TableCell>
+                    <TableCell
+                      sx={{
+                        fontSize: 18,
+                        fontFamily: "serif",
+                        fontWeight: "bold",
+                      }}
+                    >
+                      id
+                    </TableCell>
+                    <TableCell
+                      sx={{
+                        fontSize: 18,
+                        fontFamily: "serif",
+                        fontWeight: "bold",
+                      }}
+                      align="right"
+                    >
+                      firstname
+                    </TableCell>
+                    <TableCell
+                      sx={{
+                        fontSize: 18,
+                        fontFamily: "serif",
+                        fontWeight: "bold",
+                      }}
+                      align="right"
+                    >
+                      name
+                    </TableCell>
+                    <TableCell
+                      sx={{
+                        fontSize: 18,
+                        fontFamily: "serif",
+                        fontWeight: "bold",
+                      }}
+                      align="right"
+                    >
+                      age
+                    </TableCell>
+                    <TableCell
+                      sx={{
+                        fontSize: 18,
+                        fontFamily: "serif",
+                        fontWeight: "bold",
+                      }}
+                      align="right"
+                    >
+                      networth&nbsp;($)
+                    </TableCell>
+                    <TableCell
+                      sx={{
+                        fontSize: 18,
+                        fontFamily: "serif",
+                        fontWeight: "bold",
+                      }}
+                      align="right"
+                    >
+                      unity
+                    </TableCell>
+                    <TableCell
+                      sx={{
+                        fontSize: 18,
+                        fontFamily: "serif",
+                        fontWeight: "bold",
+                      }}
+                      align="right"
+                    >
+                      country
+                    </TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
@@ -312,9 +374,22 @@ export default function UsaList() {
                         <TableCell component="th" scope="row">
                           {row.personid}
                         </TableCell>
-                        <TableCell align="right">{row.prenom}</TableCell>
-                        <TableCell align="right">{row.nom}</TableCell>
-                        <TableCell align="right">
+                        <TableCell
+                          sx={{ fontSize: 18, fontFamily: "serif" }}
+                          align="right"
+                        >
+                          {row.prenom}
+                        </TableCell>
+                        <TableCell
+                          sx={{ fontSize: 18, fontFamily: "serif" }}
+                          align="right"
+                        >
+                          {row.nom}
+                        </TableCell>
+                        <TableCell
+                          sx={{ fontSize: 18, fontFamily: "serif" }}
+                          align="right"
+                        >
                           {" "}
                           {Math.abs(
                             new Date(
@@ -322,9 +397,24 @@ export default function UsaList() {
                             ).getUTCFullYear() - 1970
                           )}
                         </TableCell>
-                        <TableCell align="right">{row.networth}</TableCell>
-                        <TableCell align="right">{row.unite}</TableCell>
-                        <TableCell align="right">{row.pays}</TableCell>
+                        <TableCell
+                          sx={{ fontSize: 18, fontFamily: "serif" }}
+                          align="right"
+                        >
+                          {row.networth}
+                        </TableCell>
+                        <TableCell
+                          sx={{ fontSize: 18, fontFamily: "serif" }}
+                          align="right"
+                        >
+                          {row.unite}
+                        </TableCell>
+                        <TableCell
+                          sx={{ fontSize: 18, fontFamily: "serif" }}
+                          align="right"
+                        >
+                          {row.pays}
+                        </TableCell>
                       </TableRow>
                     ))}
                 </TableBody>
